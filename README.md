@@ -12,8 +12,8 @@ Este teste verifica os fluxos de cadastro, login, adição de produto à lista, 
 2. **Cadastro de Novo Usuário**:
    - Acesse a página de cadastro.
    - Preencha os campos com:
-     - Nome: `Luan Thomas Cláudio Nunes`
-     - E-mail: `luanthomasnunes@testerest.com.br`
+     - Nome: `Luan Thomass Cláudio Nunes`
+     - E-mail: `luanthomasnunes@testerest.com`
      - Senha: `75uj0m7k`
    - Clique no botão "Cadastrar".
    - Valide a mensagem "Cadastro realizado com sucesso".
@@ -51,8 +51,15 @@ Este teste verifica os fluxos de cadastro, login, adição de produto à lista, 
    - Clique no botão "Logout".
    - Valide que o usuário foi redirecionado para a página de login.
 
-### Como Executar:
+### Como Executar todos os testes:
+   - npx cypress run
 
-- Abra o Cypress e selecione o arquivo `produtos.cy.js`:
+### Como Executar testes específicos:   
+- Abra o Cypress e selecione o arquivo `produtos.cy.js` `cadastro.cy.js` `login.cy.js` :
 ```bash
 npx cypress open
+
+### Pré-requisitos
+Certifique-se de que o Cypress está instalado no projeto:
+```bash
+npm install cypress --save-dev
