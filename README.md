@@ -123,6 +123,8 @@ Este teste verifica os fluxos de cadastro, login, adição de produto à lista, 
    - Busca o ID do primeiro produto cadastrado com uma requisição `GET` para `/produtos`.
    - Realiza uma requisição `GET` para `/produtos/<idProduto>` para validar o produto.
 
+---
+
 ### Como Executar todos os testes:
    - npx cypress run
 
