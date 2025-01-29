@@ -1,27 +1,58 @@
-## Testes de Produtos - Frontend
-Este teste verifica o fluxo completo de pesquisa, adição à lista, navegação para a página inicial e logout no Serverest.
+## Testes de Cadastro e Login - Frontend
+
+Este teste verifica os fluxos de cadastro, login, adição de produto à lista, limpeza da lista e logout no Serverest.
 
 ### Fluxos Testados:
-1. **Pesquisar e Selecionar Produto**:
-   - Pesquisa pelo produto "Fresh".
-   - Seleciona o produto correto com o link `/detalhesProduto/0T0P0saRFIlij15Q`.
 
-2. **Adicionar Produto na Lista**:
-   - Após selecionar o produto, clica no botão "Adicionar na Lista".
+1. **Acessar Página de Cadastro**:
+   - Acesse a página de login.
+   - Clique no link "Cadastre-se".
+   - Valide que a URL é `https://front.serverest.dev/cadastrarusuarios`.
 
-3. **Limpar Carrinho**:
-   - Após selecionar o produto na lista, clica no botão "Limpar Carrinho".
-   - Valida a mensagem "Seu carrinho está vazio".
+2. **Cadastro de Novo Usuário**:
+   - Acesse a página de cadastro.
+   - Preencha os campos com:
+     - Nome: `Luan Thomas Cláudio Nunes`
+     - E-mail: `luanthomasnunes@testerest.com.br`
+     - Senha: `75uj0m7k`
+   - Clique no botão "Cadastrar".
+   - Valide a mensagem "Cadastro realizado com sucesso".
 
-4. **Voltar à Página Inicial**:
-   - Clica no botão "Página Inicial".
-   - Valida que a URL é `https://front.serverest.dev/home`.
+3. **Login com Sucesso**:
+   - Acesse a página de login.
+   - Preencha os campos com:
+     - E-mail: `luanthomasnunes@testerest.com.br`
+     - Senha: `75uj0m7k`
+   - Clique no botão "Entrar".
+   - Valide que o usuário foi redirecionado para `https://front.serverest.dev/home`.
 
-5. **Logout**:
-   - Clica no botão "Logout".
-   - Valida que o usuário foi redirecionado para a página de login.
+4. **Erro de Login com Credenciais Inválidas**:
+   - Acesse a página de login.
+   - Preencha os campos com:
+     - E-mail: `usuario.invalido@testerest.com.br`
+     - Senha: `senhaerrada`
+   - Clique no botão "Entrar".
+   - Valide a mensagem "Email e/ou senha inválidos".
+
+5. **Adicionar Produto à Lista e Limpar Lista**:
+   - Realize o login.
+   - Pesquise pelo produto "Fresh".
+   - Clique no produto correto com o link `/detalhesProduto/0T0P0saRFIlij15Q`.
+   - Clique no botão "Adicionar na Lista".
+   - Navegue para `/minhaListaDeProdutos`.
+   - Clique no botão "Limpar Lista".
+   - Valide a mensagem "Seu carrinho está vazio".
+
+6. **Voltar à Página Inicial**:
+   - Clique no botão "Página Inicial".
+   - Valide que a URL é `https://front.serverest.dev/home`.
+
+7. **Logout**:
+   - Clique no botão "Logout".
+   - Valide que o usuário foi redirecionado para a página de login.
 
 ### Como Executar:
+
 - Abra o Cypress e selecione o arquivo `produtos.cy.js`:
-  ```bash
-  npx cypress open
+```bash
+npx cypress open
