@@ -123,16 +123,13 @@ Este teste verifica os fluxos de cadastro, login, adição de produto à lista, 
    - Busca o ID do primeiro produto cadastrado com uma requisição `GET` para `/produtos`.
    - Realiza uma requisição `GET` para `/produtos/<idProduto>` para validar o produto.
 
-
 ### Como Executar todos os testes:
    - npx cypress run
 
 ### Como Executar testes específicos:   
-- Abra o Cypress e selecione o arquivo Frontend `produtos.cy.js` `cadastro.cy.js` `login.cy.js` API `usuarios.cy.js` `cadastro.cy.js` `produtos.cy.js` :
-```bash
-npx cypress open
+   - Abra o Cypress e selecione o arquivo `Frontend` `produtos.cy.js` `cadastro.cy.js` `login.cy.js` `API` `usuarios.cy.js` `cadastro.cy.js` `produtos.cy.js` :
+   - npx cypress open
 
 ### Pré-requisitos
-Certifique-se de que o Cypress está instalado no projeto:
-```bash
-npm install cypress --save-dev
+   - Certifique-se de que o Cypress está instalado no projeto:
+   - npm install cypress --save-dev    
