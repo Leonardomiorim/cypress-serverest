@@ -10,8 +10,8 @@ describe('Testes de Cadastro - Frontend', () => {
     it('Deve realizar um cadastro com sucesso', () => {
       cy.visit('/login');
       cy.get('#root > div > div > form > small > a').click();
-      cy.get('#nome').type('Luan Thomass Cláudio Nunes');
-      cy.get('#email').type('luanthomasnunes@testerest.com');
+      cy.get('#nome').type('Luan Mark Thomass Cláudio Nunes');
+      cy.get('#email').type('mark@testerest.com');
       cy.get('#password').type('75uj0m7k');
       cy.get('[data-testid="cadastrar"]').click();
       cy.contains('Cadastro realizado com sucesso').should('be.visible');
